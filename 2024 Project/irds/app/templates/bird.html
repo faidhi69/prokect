@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+{%block content%}
+{{bird.name}}
+<div class="birddescription">
+    {{bird.description}}
+</div>
+<p>Maximum estimated lifespan: {{bird.maximum_lifespan}} years</p>
+<p>Habitat: {% for habitat in bird.habitats %}
+    {{habitat.name}}
+    {%endfor%}</p>
+<p>Regions found in: {% for region in bird.regions %}
+    {{region.name}}
+    {%endfor%}</p>
+<dr>
+    {{bird.status.name}}
+</dr>
+{%endblock%}

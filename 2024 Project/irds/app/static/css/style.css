@@ -1,0 +1,194 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #004d40;
+    /* Dark teal background */
+    color: #fff;
+    /* White text color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.site-header p {
+    margin: 5px 0 0 0;
+    font-size: 1.2em;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #00796b;
+    /* Dark teal background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.navbar a {
+    color: #fff;
+    /* White text color */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Smooth transition for hover effects */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #004d40;
+    /* Darker teal on hover */
+    color: #ffd700;
+    /* Gold text color on hover */
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Centering form container */
+.cen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Form styles */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border: #e1e1e1 1px solid;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+form p {
+    margin: 0 0 10px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    background: #35424a;
+    color: #ffffff;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #e8491d;
+}
+
+/* Error messages */
+span {
+    color: red;
+    font-size: 0.9em;
+}
+
+.all_birdpage {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    /* Light background for the page */
+}
+
+.bird-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Set a min width for each box */
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+    /* Add padding to the grid to prevent boxes from stretching to the edges */
+}
+
+.bird-box {
+    background-color: #e0f7fa;
+    /* Light cyan background */
+    border: 1px solid #00796b;
+    /* Dark teal border */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 121, 107, 0.5);
+    /* Dark teal shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #004d40;
+    /* Dark teal text */
+    font-family: 'Arial', sans-serif;
+    /* Simple sans-serif font */
+    max-width: 200px;
+    /* Ensure each box has a fixed width */
+    text-align: center;
+}
+
+.bird-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 121, 107, 0.8);
+    /* Brighter shadow on hover */
+}
+
+.bird-box a {
+    text-decoration: none;
+    color: #004d40;
+}
+
+.bird-box img {
+    max-width: 100%;
+    max-height: 150px;
+    border: 1px solid #00796b;
+    /* Dark teal border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    /* Ensure margin below image */
+}
+
+.bird-name {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #004d40;
+}

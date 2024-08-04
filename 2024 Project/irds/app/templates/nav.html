@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <a href="/" class="{{ 'active' if request.endpoint == 'hello_world' else '' }}">Home</a>
+  <a href="/all_birds" class="{{ 'active' if request.endpoint == 'all_birds' else '' }}">Bird List</a>
+  {% if current_user.is_authenticated %}
+  <a href="/add_bird" class="{{ 'active' if request.endpoint == 'add_bird' else '' }}">Add a Bird</a>
+  <a href="/logout">Logout</a>
+  {% else %}
+  <a href="/login">Login</a>
+  <a href="/register">Register</a>
+  {% endif %}
+  <a href="/search_bird" class="{{ 'active' if request.endpoint == 'search_bird' else '' }}">Search</a>
+</nav>

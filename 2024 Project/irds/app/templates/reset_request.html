@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}Reset Password{% endblock %}
+{% block content %}
+<h2>Reset Password</h2>
+<form method="POST" class="form-container">
+    {{ form.csrf_token }}
+    <p>Email: {{ form.email }} {{ form.email.errors }}</p>
+    <input type="submit" value="Request Password Reset">
+</form>
+{% endblock %}

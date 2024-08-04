@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{% block content %}
+<main class="all_birdpage">
+    <div class="big_image"></div>
+    <div class="bird-grid">
+        {% for bird in allbirds %}
+        <div class="bird-box">
+            <img src="{{bird.photo}}" alt="{{bird.name}} Image">
+            <a href="/birds/{{bird.id}}">{{bird.name}}</a>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

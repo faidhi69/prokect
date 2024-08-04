@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h2>Login</h2>
+<form method="POST" class="form-container">
+    {{ form.csrf_token }}
+    <p>Email: {{ form.email }} {{ form.email.errors }}</p>
+    <p>Password: {{ form.password }} {{ form.password.errors }}</p>
+    <p>Remember me: {{ form.remember }}</p>
+    <input type="submit" value="Login">
+</form>
+
+<!-- Flash messages for invalid login attempts -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class="flashes">
+    {% for category, message in messages %}
+    <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<!-- Link to reset password page -->
+<p><a href="{{ url_for('reset_request') }}">Forgot Password?</a></p>
+
+{% endblock %}

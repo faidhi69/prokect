@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block title %}Search Birds{% endblock %}
+{% block content %}
+<h2>Search Birds</h2>
+<form method="POST" class="form-container">
+    {{ form.csrf_token }}
+    <p>Name: {{ form.name }} {{ form.name.errors }}</p>
+    <p>Habitat: {{ form.habitat }} {{ form.habitat.errors }}</p>
+    <input type="submit" value="Search">
+</form>
+
+{% if birds %}
+<h3>Search Results</h3>
+<ul>
+    {% for bird in birds %}
+    <a href="/birds/{{bird.id}}">{{bird.name}}</a>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No birds found.</p>
+{% endif %}
+{% endblock %}

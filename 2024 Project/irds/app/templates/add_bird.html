@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Add Bird</h2>
+<div class="cen">
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <p>Name: {{ form.name }} <span style="color:red">{{ form.name.errors }}</span></p>
+        <p>Maximum Lifespan: {{ form.maximum_lifespan }} <span style="color:red">{{ form.maximum_lifespan.errors
+                }}</span></p>
+        <p>Description: {{ form.description }} <span style="color:red">{{ form.description.errors }}</span></p>
+        <p>Conservation Status: {{ form.status }} <span style="color:red">{{ form.status.errors }}</span></p>
+        <p>Habitat: {{ form.habitats }} <span style="color:red">{{ form.habitats.errors }}</span></p>
+        <input type="submit" value="Add this Bird">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h2>Register</h2>
+<form method="POST" class="form-container">
+    {{ form.csrf_token }}
+    <p>Username: {{ form.username }} {{ form.username.errors }}</p>
+    <p>Email: {{ form.email }} {{ form.email.errors }}</p>
+    <p>Password: {{ form.password }} {{ form.password.errors }}</p>
+    <p>Confirm Password: {{ form.confirm_password }} {{ form.confirm_password.errors }}</p>
+    <input type="submit" value="Sign Up">
+</form>
+{% endblock %}
